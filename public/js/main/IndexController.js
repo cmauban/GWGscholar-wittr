@@ -12,7 +12,7 @@ export default function IndexController(container) {
 }
 
 IndexController.prototype._registerServiceWorker = function() {
-  if (!navigator.serviceWorker) return;
+  if (!navigator.serviceWorker) return; //TESTING LOG REQUEST BRANCH
 
   navigator.serviceWorker.register('/sw.js').then(function() {
     console.log('Registration worked!');
