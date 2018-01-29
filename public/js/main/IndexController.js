@@ -12,7 +12,7 @@ export default function IndexController(container) {
 }
 
 IndexController.prototype._registerServiceWorker = function() {
-// TODO: register service worker TESTING TRANSFER
+// TODO: register service worker TESTING TRANSFER TASK INSTALL
 if (!navigator.serviceWorker) return; // avoid dom errors if sw isn't supported
 
 // .register returns a promise ('.then');
