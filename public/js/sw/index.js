@@ -1,11 +1,8 @@
 self.addEventListener('fetch', function(event) {
   event.respondWith(
-    fetch(event.request).then(function(response) {
-      if (response.status === 404) {
-        // TODO: instead, respond with the gif at
-        // /imgs/dr-evil.gif
-        // using a network request
-        return new Response("Whoops, not found");
+    fetch(event.request).then(function(response) { // network request
+      if (response.status === 404) { // if the page is unknown,
+        return fetch('/imgs/dr-evil.gif'); // fetch and return gif
       }
       return response;
     }).catch(function() {
